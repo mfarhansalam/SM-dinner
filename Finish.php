@@ -5,7 +5,7 @@ include "action/db_connect.php";
 
 $sql="SELECT * FROM company";
 $result = mysqli_query($connect, $sql);
-// echo $tUsername;
+
 
 ?>
 <!DOCTYPE html>

@@ -25,7 +25,8 @@
                         <div class="text-center">
                             <img src="assets/img/Logo-dinner.png" alt="silentmode dinner" >
     
-                            <a class="btn btn-primary" href="Company.php">Get Started</a>
+                            <a class="btn btn-primary" href="Company.php">Get Started</a><br><br>
+                            <a href ="Dashboard.php"> See Dashboard</a>
                         </div>
                     </div>
                 </div>

@@ -5,8 +5,6 @@ $id=$_GET['id'];
 $sql="SELECT * FROM users WHERE company = 1 AND dept = $id";
 $result = mysqli_query($connect, $sql);
 
-echo"You have pick $id ";
-// echo $tUsername;
 
 ?>
 <!DOCTYPE html>
@@ -32,6 +30,9 @@ echo"You have pick $id ";
 
         <div class="sidenav" style="padding-left: 20px;padding-right: 20px;padding-top: 60px;">
             <img src="assets/img/Logo-dinner.png" alt="silentmode dinner" >
+            <div style="padding-top: 180%; padding-left: 40%;">
+            <a onclick="history.back()" class="previous round">&#8249;</a>
+        </div>
             
         </div>
         
