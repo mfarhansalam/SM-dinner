@@ -10,7 +10,7 @@ if($_GET) {
 
 	$sql  = "UPDATE users SET accompany = '$accompany' WHERE id = '$id'";
 	if($connect->query($sql) === TRUE) {
-		echo "<script>window.alert('Yay dah check in');
+		echo "<script>window.alert('silentmode chek');
          window.location.href='../Finish.php';</script>";
        
 	} 

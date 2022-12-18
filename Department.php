@@ -70,7 +70,7 @@ $comp_name=$_GET['comp_name'];
                         
                         echo "
                             
-                         <a href='action/Accompany.php?id=".$row['id']."' class='btn btn-outline-warning' role='button' style=' margin-bottom: 10px;'>".$row['name']."</a>
+                         <a href='action/Nonaccompany.php?id=".$row['id']."' class='btn btn-outline-warning' role='button' style=' margin-bottom: 10px;'>".$row['name']."</a>
                         ";
                   }
                 }
@@ -82,7 +82,7 @@ $comp_name=$_GET['comp_name'];
                         
                         echo "
                           
-                         <a href='action/Accompany.php?id=".$row['id']."' class='btn btn-outline-warning' role='button' style=' margin-bottom: 10px;'>".$row['name']."</a>
+                         <a href='action/Nonaccompany.php?id=".$row['id']."' class='btn btn-outline-warning' role='button' style=' margin-bottom: 10px;'>".$row['name']."</a>
                         ";
                   }
                 }
