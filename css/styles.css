@@ -11803,3 +11803,26 @@ a:hover {
 .round {
   border-radius: 50%;
 }
+
+#dinner {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#dinner td, #dinner th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#dinner tr:nth-child(even){background-color: #f2f2f2;}
+
+#dinner tr:hover {background-color: #ddd;}
+
+#dinner th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}

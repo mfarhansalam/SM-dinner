@@ -60,7 +60,7 @@ $totalabsent = mysqli_query($connect, $sql3);
 </div>
 <!-- All users goes here -->
 <div id="all" class="tabcontent">
-  <table class ="table">
+  <table id ="dinner">
   <tr>
     <th>No</th>
     <th>Name</th>
@@ -88,7 +88,7 @@ $totalabsent = mysqli_query($connect, $sql3);
 
 <!-- Attended users goes here -->
 <div id="attend" class="tabcontent">
-  <table class ="table">
+  <table id ="dinner">
   <tr>
     <th>No</th>
     <th>Name</th>
@@ -110,13 +110,16 @@ $totalabsent = mysqli_query($connect, $sql3);
               $no++;
         }
       }
+      else{
+        echo "<td colspan='3'>No one is coming yet</td>";
+      }
   ?>
 </table>
 </div>
 
 <!-- Absent users goes here -->
 <div id="absent" class="tabcontent">
-  <table class ="table">
+  <table id ="dinner">
   <tr>
     <th>No</th>
     <th>Name</th>
@@ -137,6 +140,9 @@ $totalabsent = mysqli_query($connect, $sql3);
               ";
               $no++;
         }
+      }
+      else{
+        echo "<td colspan='3'>Congrats! All audiences were attended</td>";
       }
   ?>
 </table>
