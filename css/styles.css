@@ -3453,6 +3453,11 @@ textarea.form-control-lg {
   border: 3px solid #e4c662;
   font-weight: bold;
 }
+.btn-outline-warning-new{
+  color: #e4c662;
+  border: 3px solid #e4c662;
+  font-weight: bold;
+}
 .btn-outline-warning:hover {
   color: #000;
   background-color: #e4c662;

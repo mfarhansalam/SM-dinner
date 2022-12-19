@@ -49,27 +49,33 @@ require_once 'db_connect.php';
                     
                     if($connect->query($sql) === TRUE) {
                     ?>
+                    <div class="d-flex justify-content-center">
+                        <div class="text-center">
                         <form action="complete.php" method="get" >
                         <input type = "hidden" name="id" value='.$id.'><br>
-                        <div class="button" > 
-                            <input type="radio" id="a50" name="accompany" value="alone" onchange="this.form.submit()" /> 
-                            <label class="btn btn-default" for="a50" style="height: 82px; width: 166px;">Alone</label>
+                        <div class="" > 
+                            <input type="radio" id="alone" name="accompany" value="alone" onchange="this.form.submit()" /> 
+                            <label class="btn btn-default" for="alone" id="accompany">Alone</label>
                             
                         </div><br>
-                        <div class="button" > 
-                            <input type="radio" id="a50" name="accompany" value="spouse" onchange="this.form.submit()" /> 
-                            <label class="btn btn-default" for="a50" style="height: 82px; width: 240px;">Spouse</label>
+                        <div class="" > 
+                            <input type="radio" id="spouse" name="accompany" value="spouse" onchange="this.form.submit()" /> 
+                            <label class="btn btn-default" for="spouse" id="accompany">Spouse</label>
                             
                         </div><br>
-                        <div class="button"> 
-                            <input type="radio" id="a50" name="accompany" value="spouse_child" onchange="this.form.submit()" /> 
-                            <label class="btn btn-default" for="a50" style="height: 82px; width: 500px;">Spouse and child</label>
+                        <div class=""> 
+                            <input type="radio" id="spouse_child" name="accompany" value="spouse_child" onchange="this.form.submit()" /> 
+                            <label class="btn btn-default" for="spouse_child" id="accompany">Spouse and child</label>
                             
                         </div>
                         <!-- <input type="radio" id="radio-button" name="accompany" value="alone" onchange="this.form.submit()"> Alone <br>
                         <input type="radio" id="radio-button" name="accompany" value="spouse" onchange="this.form.submit()"> Spouse <br>
                         <input type="radio" id="radio-button" name="accompany" value="spouse_child" onchange="this.form.submit()"> Spouse and Child <br> -->
                          </form>
+                        </div>
+                        
+                    </div>
+                        
                     <?php 
                     } 
                     

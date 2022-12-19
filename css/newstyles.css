@@ -1,15 +1,11 @@
 .button {
     float: left;
     margin: 0 5px 0 0;
-    width: 100px;
-    height: 40px;
-    position: relative;
   }
   
   .button label,
   .button input {
     display: block;
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -21,7 +17,7 @@
     z-index: 100;
   }
   
-  .button input[type="radio"]:checked + label {
+   input[type="radio"]:checked + label {
     background: #20b8be;
     border-radius: 4px;
   }
@@ -31,4 +27,25 @@
     z-index: 90;
     line-height: 1.8em;
   }
+
+  #accompany {
+    height: 70px; 
+    width: 500px;
+    color: #e4c662;
+    border: 1px solid #e4c662;
+    font-size: 20px;
+  }
+
+  #alone{
+    visibility: hidden;
+  }
+
+  #spouse{
+    visibility: hidden;
+  }
+
+  #spouse_child{
+    visibility: hidden;
+  }
+
   
