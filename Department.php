@@ -120,11 +120,7 @@ $comp_name=$_GET['comp_name'];
                         
                   }
                 }
-
-                ?>
-
-<?php
-                if($comp_name == 'TERATO_SENTINEL'){
+                else if($comp_name == 'TERATO_SENTINEL'){
                 ?>
                   <h2 style="text-align: center;">Who are you? </h2>  
                   <div class="row g-4" style="padding-top: 2cm">
