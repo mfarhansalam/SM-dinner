@@ -64,7 +64,7 @@ $totalabsent = mysqli_query($connect, $sql3);
   <tr>
     <th>No</th>
     <th>Name</th>
-    <th>Status</th>
+    <th>Table</th>
   </tr>
 
    
@@ -76,7 +76,7 @@ $totalabsent = mysqli_query($connect, $sql3);
               <tr>
               <td> $no </td>
               <td> $row[name] </td>
-              <td> $row[attend_status] </td>
+              <td> $row[tableNo] </td>
               </tr>
               ";
               $no++;
@@ -92,7 +92,7 @@ $totalabsent = mysqli_query($connect, $sql3);
   <tr>
     <th>No</th>
     <th>Name</th>
-    <th>Status</th>
+    <th>Table</th>
   </tr>
 
    
@@ -104,7 +104,7 @@ $totalabsent = mysqli_query($connect, $sql3);
               <tr>
               <td> $no </td>
               <td> $row[name] </td>
-              <td> $row[attend_status] </td>
+              <td> $row[tableNo] </td>
               </tr>
               ";
               $no++;
@@ -123,7 +123,7 @@ $totalabsent = mysqli_query($connect, $sql3);
   <tr>
     <th>No</th>
     <th>Name</th>
-    <th>Status</th>
+    <th>Table</th>
   </tr>
 
    
@@ -135,7 +135,7 @@ $totalabsent = mysqli_query($connect, $sql3);
               <tr>
               <td> $no </td>
               <td> $row[name] </td>
-              <td> $row[attend_status] </td>
+              <td> $row[tableNo] </td>
               </tr>
               ";
               $no++;

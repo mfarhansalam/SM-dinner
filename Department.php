@@ -4,10 +4,19 @@ include "action/db_connect.php";
 
 $sql="SELECT * FROM department";
 $sql2="SELECT * FROM users WHERE company = 2";
-$sql3="SELECT * FROM users WHERE company = 3";
+$sql3="SELECT * FROM users WHERE company = 7";
+$sql4= "SELECT * FROM users WHERE attend_status = 'Yes' ";
+$sql5= "SELECT * FROM users WHERE attend_status = 'No' ";
+
+
+
+
 $result3 = mysqli_query($connect, $sql3);
 $result2 = mysqli_query($connect, $sql2);
 $result = mysqli_query($connect, $sql);
+$attend = mysqli_query($connect, $sql4);
+$absent = mysqli_query($connect, $sql5);
+
 $comp_name=$_GET['comp_name'];
 
 // echo $tUsername;
@@ -61,46 +70,107 @@ $comp_name=$_GET['comp_name'];
                               ";
                         }
                     }
-                }   
-                if($comp_name == 'Celebshare'){
-                 ?>
-                  <h2 style="text-align: center;">Who are you? </h2>  
+                }    ?>
+
+
                 <?php
-                    while($row = $result2->fetch_assoc()) {
-                        
-                        
-                        echo '
-                            <a href="  action/Nonaccompany.php?id='.$row['id'].'   " >
-                             <img src="data:image/jpg;base64,'.base64_encode($row['picture']).'"  style="border:0.5px solid black; border-radius: 50%; width: 150px; height: 150px;" > 
-                            </a>
-                            ';
-                ?>
-                            <h5 class="title" style="padding-top:10px"> <?php echo $row['name'] ?> </h5>
-                                            
-                            <h6 class="title"> <?php echo $row['roles'] ?> </h6>
-                <?php
-                  }
-                }
-                else if ($comp_name == 'Terato'){
+                if($comp_name == 'VIP'){
                 ?>
                   <h2 style="text-align: center;">Who are you? </h2>  
+                  <div class="row g-4" style="padding-top: 2cm">
                 <?php
-                    while($row = $result3->fetch_assoc()) {
-                        
-                        echo '
-                            <a href="  action/Nonaccompany.php?id='.$row['id'].'   " >
-                             <img src="data:image/jpg;base64,'.base64_encode($row['picture']).'"  style="border:0.5px solid black; border-radius: 50%; width: 150px; height: 150px;" > 
-                            </a>
-                            ';
-                ?>
-                            <h5 class="title" style="padding-top:10px"> <?php echo $row['name'] ?> </h5>
+                    while($row3 = $result2->fetch_assoc()) {
+                        ?>
+                        <div class="col-md-4 col-lg-4 ">
+                            <div class="box">
+
+                            <?php 
+                                        if($row3 = $attend->fetch_assoc()){
+                                            echo '
+                                            <a>
+                                            <h1 class="title" style="padding-top:10px;  opacity: 0.2;">Table '.$row3['tableNo'].'</h1>
+                                            <img src="data:image/jpg;base64,'.base64_encode($row3['picture']).'"  style="border: 5px solid green; border-radius: 50%; width: 150px; height: 150px; opacity: 0.2;"  > 
                                             
-                            <h6 class="title"> <?php echo $row['roles'] ?> </h6>
-                <?php
+                                            </a>
+                                            <h5 class="title" style="padding-top:10px;  opacity: 0.2;">'.$row3['name'].'</h5>
+                                            <h6 class="title" style="opacity: 0.2;">'.$row3['roles'].'</h6>
+                                            
+                                            '; 
+                                        }
+                                        else if($row4 = $absent->fetch_assoc()){
+                                            echo '
+
+                                            <a href="  action/Accompany.php?id='.$row4['id'].'   " >
+                                            <h1>Table '.$row4['tableNo'].'</h1>
+                                            <img src="data:image/jpg;base64,'.base64_encode($row4['picture']).'"  style="border:0.5px solid black; border-radius: 50%; width: 150px; height: 150px;" > 
+                                            </a>
+                                            <h5 class="title" style="padding-top:10px">'.$row4['name'].'</h5>
+                                            <h6 class="title">'.$row4['roles'].'</h6>
+                                            '; 
+                                        }
+                                        
+                                    ?>
+
+                            </div>
+                                    
+
+                        </div>
+                       
+                        <?php
+                        
                   }
                 }
-            
-               
+
+                ?>
+
+<?php
+                if($comp_name == 'TERATO_SENTINEL'){
+                ?>
+                  <h2 style="text-align: center;">Who are you? </h2>  
+                  <div class="row g-4" style="padding-top: 2cm">
+                <?php
+                    while($row1 = $result3->fetch_assoc()) {
+                        ?>
+                        <div class="col-md-4 col-lg-4 ">
+                            <div class="box">
+
+                            <?php 
+                                        if($row1 = $attend->fetch_assoc()){
+                                            echo '
+                                            <a>
+                                            <h1 class="title" style="padding-top:10px;  opacity: 0.2;">Table '.$row1['tableNo'].'</h1>
+                                            <img src="data:image/jpg;base64,'.base64_encode($row1['picture']).'"  style="border: 5px solid green; border-radius: 50%; width: 150px; height: 150px; opacity: 0.2;"  > 
+                                            
+                                            </a>
+                                            <h5 class="title" style="padding-top:10px;  opacity: 0.2;">'.$row1['name'].'</h5>
+                                            <h6 class="title" style="opacity: 0.2;">'.$row1['roles'].'</h6>
+                                            
+                                            '; 
+                                        }
+                                        else if($row2 = $absent->fetch_assoc()){
+                                            echo '
+
+                                            <a href="  action/Accompany.php?id='.$row2['id'].'   " >
+                                            <h1>Table '.$row2['tableNo'].'</h1>
+                                            <img src="data:image/jpg;base64,'.base64_encode($row2['picture']).'"  style="border:0.5px solid black; border-radius: 50%; width: 150px; height: 150px;" > 
+                                            </a>
+                                            <h5 class="title" style="padding-top:10px">'.$row2['name'].'</h5>
+                                            <h6 class="title">'.$row2['roles'].'</h6>
+                                            '; 
+                                        }
+                                        
+                                    ?>
+
+                            </div>
+                                    
+
+                        </div>
+                       
+                        <?php
+                        
+                  }
+                }
+
                 ?>
                 
 
