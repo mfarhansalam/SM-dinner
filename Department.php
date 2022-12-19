@@ -68,10 +68,17 @@ $comp_name=$_GET['comp_name'];
                 <?php
                     while($row = $result2->fetch_assoc()) {
                         
-                        echo "
-                            
-                         <a href='action/Nonaccompany.php?id=".$row['id']."' class='btn btn-outline-warning' role='button' style=' margin-bottom: 10px;'>".$row['name']."</a>
-                        ";
+                        
+                        echo '
+                            <a href="  action/Nonaccompany?id='.$row['id'].'   " >
+                             <img src="data:image/jpg;base64,'.base64_encode($row['picture']).'"  style="border:0.5px solid black; border-radius: 50%; width: 150px; height: 150px;" > 
+                            </a>
+                            ';
+                ?>
+                            <h5 class="title" style="padding-top:10px"> <?php echo $row['name'] ?> </h5>
+                                            
+                            <h6 class="title"> <?php echo $row['roles'] ?> </h6>
+                <?php
                   }
                 }
                 else if ($comp_name == 'Terato'){
@@ -80,10 +87,16 @@ $comp_name=$_GET['comp_name'];
                 <?php
                     while($row = $result3->fetch_assoc()) {
                         
-                        echo "
-                          
-                         <a href='action/Nonaccompany.php?id=".$row['id']."' class='btn btn-outline-warning' role='button' style=' margin-bottom: 10px;'>".$row['name']."</a>
-                        ";
+                        echo '
+                            <a href="  action/Nonaccompany?id='.$row['id'].'   " >
+                             <img src="data:image/jpg;base64,'.base64_encode($row['picture']).'"  style="border:0.5px solid black; border-radius: 50%; width: 150px; height: 150px;" > 
+                            </a>
+                            ';
+                ?>
+                            <h5 class="title" style="padding-top:10px"> <?php echo $row['name'] ?> </h5>
+                                            
+                            <h6 class="title"> <?php echo $row['roles'] ?> </h6>
+                <?php
                   }
                 }
             

@@ -22,6 +22,15 @@ require_once 'db_connect.php';
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="css/newstyles.css" rel="stylesheet" />
 
+		<style>
+			body {
+			background-image: url('../assets/img/bg-annualdinner.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			}
+		</style>
+
     </head>
 
 	<body>
@@ -39,7 +48,7 @@ require_once 'db_connect.php';
                            Swal.fire({
                             icon: 'success',
                             title: 'Thank You !',
-                            text: 'Have a great night'
+                            text: 'Have a great dinner'
                         });
                             
                             </script> 
