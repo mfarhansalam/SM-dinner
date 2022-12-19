@@ -50,7 +50,7 @@ require_once 'db_connect.php';
                            Swal.fire({
                             icon: 'success',
                             title: 'Thank You !',
-                            text: 'Have a great dinner'
+                            text: 'may you have a glarious night'
                         });
                             
                             </script> 

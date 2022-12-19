@@ -24,19 +24,31 @@ $result = mysqli_query($connect, $sql);
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+			body {
+			background-image: url('assets/img/bg-annualdinner.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			}
+		</style>
     </head>
-    <body id="page-top">
+    <body >
         
         <!-- Masthead-->
-        <div style="width:mx-auto; height:mx-auto;" >
+        <!-- <div style="width:mx-auto; height:mx-auto;" >
             <header class="masthead"  >
                 <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center" >
+                
                     <div class="d-flex justify-content-center">
+                        
                         <div class="center">
-                            <img src="assets/img/Logo-dinner.png" alt="silentmode dinner" >
+                            
                             <div class="d-flex justify-content-center">
-                                <div class="text-center">
-                                    <h1 class="mx-auto my-0 text-uppercase">THANKYOU</h1>
+                            
+                                <div class="text-center" >
+                                <img src="assets/img/Logo-dinner.png" alt="silentmode dinner" style="margin: top 25px;"  >
+                                <h1 class="mx-auto my-0 text-uppercase">THANKYOU</h1>
                                     
                                     <h2 class="text-white-50 mx-auto mt-2 mb-5">Get ready to pose at 360 photo booth</h2>
                                     <a class="btn btn-primary" href="index.php">lets Rock</a>
@@ -47,8 +59,21 @@ $result = mysqli_query($connect, $sql);
                     </div>
                 </div>
             </header>
-        </div>
+        </div> -->
        
-        
+                        <div class="center">
+              
+                            <div class="d-flex justify-content-center">
+                            
+                                <div class="text-center" >
+                                <img src="assets/img/Logo-dinner.png" alt="silentmode dinner" style="margin: top 25px;"  >
+                                <!-- <h1 class="text-white-50 mx-auto mt-2 mb-5" style="font-size: 70px;">Thank you</h1> -->
+                                    
+                                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Get ready to pose at 360 photo booth</h2>
+                                    <a class="btn btn-primary" href="index.php">lets Rock</a>
+                                </div>
+                            </div>
+                            
+                        </div>
     </body>
 </html>

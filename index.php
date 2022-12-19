@@ -14,8 +14,16 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+			body {
+			background-image: url('assets/img/bg-annualdinner.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			}
+		</style>
     </head>
-    <body id="page-top">
+    <body >
         
         <!-- Masthead-->
         <div style="width:mx-auto; height:mx-auto;" >
@@ -25,7 +33,7 @@
                         <div class="text-center">
                             <img src="assets/img/Logo-dinner.png" alt="silentmode dinner" >
     
-                            <a class="btn btn-primary" href="Company.php" style="font-size:20px">Get Started</a><br><br>
+                            <a class="btn btn-primary" href="Company.php" style="font-size:20px">I am here!!</a><br><br>
                             <a href ="Dashboard.php"> See Dashboard</a>
                         </div>
                     </div>

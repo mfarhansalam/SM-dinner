@@ -3,7 +3,9 @@
 include "action/db_connect.php";
 $id=$_GET['id'];
 $sql="SELECT * FROM users WHERE company = 1 AND dept = $id";
+$sql2= "SELECT * FROM users WHERE attend_status = 'Yes' ";
 $result = mysqli_query($connect, $sql);
+$attend = mysqli_query($connect, $sql2);
 
 
 ?>
@@ -51,12 +53,23 @@ $result = mysqli_query($connect, $sql);
                         ?> 
                             <div class="col-md-4 col-lg-4 " >
                                 <div class="box">
+
                                     <?php 
-                                        echo '
-                                        <a href="  action/Accompany.php?id='.$row['id'].'   " >
-                                        <img src="data:image/jpg;base64,'.base64_encode($row['picture']).'"  style="border:0.5px solid black; border-radius: 50%; width: 150px; height: 150px;" > 
-                                        </a>
-                                        '; 
+                                        if($attend){
+                                            echo '
+                                            <a href="  action/Accompany.php?id='.$row['id'].'   " >
+                                            <img src="data:image/jpg;base64,'.base64_encode($row['picture']).'"  style="border:0.5px solid black; border-radius: 50%; width: 150px; height: 150px; opacity: 0.2;"  > 
+                                            
+                                            </a>
+                                            '; 
+                                        }else{
+                                            echo '
+                                            <a href="  action/Accompany.php?id='.$row['id'].'   " >
+                                            <img src="data:image/jpg;base64,'.base64_encode($row['picture']).'"  style="border:0.5px solid black; border-radius: 50%; width: 150px; height: 150px;" > 
+                                            </a>
+                                            '; 
+                                        }
+                                        
                                     ?>
                                     
                                     <h5 class="title" style="padding-top:10px"> <?php echo $row['name'] ?> </h5>

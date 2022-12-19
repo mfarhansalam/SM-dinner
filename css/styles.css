@@ -7873,6 +7873,7 @@ textarea.form-control-lg {
 
 .text-center {
   text-align: center !important;
+  
  
 }
 
@@ -11616,11 +11617,8 @@ body {
   max-height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background:  url("../assets/img/bg-annualdinner.png");
   background-position: center;
-
   background-repeat: no-repeat;
-  background-attachment: scroll;
   background-size: cover;
 }
 .masthead h1, .masthead .h1 {
