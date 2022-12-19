@@ -70,7 +70,7 @@ $comp_name=$_GET['comp_name'];
                         
                         
                         echo '
-                            <a href="  action/Nonaccompany?id='.$row['id'].'   " >
+                            <a href="  action/Nonaccompany.php?id='.$row['id'].'   " >
                              <img src="data:image/jpg;base64,'.base64_encode($row['picture']).'"  style="border:0.5px solid black; border-radius: 50%; width: 150px; height: 150px;" > 
                             </a>
                             ';
@@ -88,7 +88,7 @@ $comp_name=$_GET['comp_name'];
                     while($row = $result3->fetch_assoc()) {
                         
                         echo '
-                            <a href="  action/Nonaccompany?id='.$row['id'].'   " >
+                            <a href="  action/Nonaccompany.php?id='.$row['id'].'   " >
                              <img src="data:image/jpg;base64,'.base64_encode($row['picture']).'"  style="border:0.5px solid black; border-radius: 50%; width: 150px; height: 150px;" > 
                             </a>
                             ';

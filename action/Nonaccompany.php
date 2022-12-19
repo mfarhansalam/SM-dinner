@@ -22,6 +22,15 @@ require_once 'db_connect.php';
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="css/newstyles.css" rel="stylesheet" />
 
+        <style>
+			body {
+			background-image: url('../assets/img/bg-annualdinner.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			}
+		</style>
+
     </head>
     <body >
 
