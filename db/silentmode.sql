@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2022 at 07:11 PM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.7
+-- Generation Time: Dec 20, 2022 at 04:14 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,7 +39,7 @@ CREATE TABLE `company` (
 INSERT INTO `company` (`id`, `comp_name`) VALUES
 (1, 'Silentmode'),
 (2, 'VIP'),
-(7, 'TERATO_SENTINEL');
+(3, 'TERATO_SENTINEL');
 
 -- --------------------------------------------------------
 
@@ -71,10 +71,7 @@ INSERT INTO `department` (`id`, `dept_name`) VALUES
 (18, 'Intern'),
 (19, 'Slurp Retail Tech'),
 (20, 'Celeb Star'),
-(21, 'Indonesia (Expats)'),
-(22, 'Avana'),
-(23, 'NAZA World Group of Companies'),
-(24, 'Smartfive');
+(21, 'Indonesia (Expats)');
 
 -- --------------------------------------------------------
 
@@ -126,12 +123,12 @@ INSERT INTO `users` (`id`, `name`, `dept`, `company`, `accompany`, `attend_statu
 (32, 'Mohammad Khairunnaim bin Azman', 11, 1, NULL, 'No', 'Senior Hub Developer', NULL, ''),
 (33, 'Muhammad Eizlan bin Edi Remi', 11, 1, NULL, 'No', 'Hub Developer', NULL, ''),
 (34, 'Khairul Azmi bin Abdul Rashid', 11, 1, NULL, 'No', 'Lead POS Development', NULL, ''),
-(35, 'Farah Syahirah binti Abdul Rahim', 11, 1, NULL, 'No', 'POS Developer', NULL, ''),
+(35, 'Farah Syahirah binti Abdul Rahim', 11, 1, NULL, 'Yes', 'POS Developer', NULL, ''),
 (38, 'Syafiq Aiman bin Sobri', 11, 1, NULL, 'No', 'POS Developer', NULL, ''),
 (40, 'Muhammad Raffiq bin Mohd Khalil', 12, 1, NULL, 'No', 'Product Manager', NULL, ''),
 (41, 'Nur Aina Arina binti Razali', 12, 1, NULL, 'No', 'Business Analyst', NULL, ''),
 (42, 'Siti Nursyafiqah binti Mohd Rode', 12, 1, NULL, 'No', 'Business Analyst', NULL, ''),
-(43, 'Nuraisyah binti Ibrahim', 12, 1, NULL, 'No', 'Web Tester', 1, ''),
+(43, 'Nuraisyah binti Ibrahim', 12, 1, NULL, 'No', 'Web Tester', NULL, ''),
 (44, 'Muhamad Syafiee bin Anis', 13, 1, NULL, 'No', 'Customer Support Manager', NULL, ''),
 (45, 'Putera Nur Aidil bin Kamarudin', 13, 1, NULL, 'No', 'Senior Support Executive', NULL, ''),
 (46, 'Muhammad Hazim bin Ahmad', 13, 1, NULL, 'No', 'Senior Support Executive', NULL, ''),
@@ -180,14 +177,14 @@ INSERT INTO `users` (`id`, `name`, `dept`, `company`, `accompany`, `attend_statu
 (89, 'Muhammad Athaberyl Ramadhyli Adl', 21, 1, NULL, 'No', 'Architecture Developer', NULL, ''),
 (90, 'Risma Ananda Harby', 21, 1, NULL, 'No', 'Architecture Developer', NULL, ''),
 (91, 'Tilis Tiadi', 21, 1, NULL, 'No', 'Architecture Developer', NULL, ''),
-(92, 'Shu ', NULL, 7, NULL, 'No', '', NULL, ''),
-(93, 'Zharfan ', NULL, 7, NULL, 'No', '', NULL, ''),
-(94, 'Samahah', NULL, 7, NULL, 'No', '', NULL, ''),
-(95, 'Farid ', NULL, 7, NULL, 'No', '', NULL, ''),
+(92, 'Shu ', NULL, 3, NULL, 'No', '', NULL, ''),
+(93, 'Zharfan ', NULL, 3, '', 'No', '', NULL, ''),
+(94, 'Samahah', NULL, 3, NULL, 'No', '', NULL, ''),
+(95, 'Farid ', NULL, 3, NULL, 'No', '', NULL, ''),
 (96, 'Rizal Zainuddin ', NULL, 2, NULL, 'No', '', NULL, ''),
-(97, 'Tunku Omar Asraf Bin Tengku\r\nHasmuddin', 22, 2, NULL, 'No', '', NULL, ''),
-(98, 'Reshma Binti Abdull Malik', 23, 7, NULL, 'No', '', NULL, ''),
-(99, 'Chris Toh', 24, 2, NULL, 'No', '', NULL, '');
+(97, 'Tunku Omar Asraf Bin Tengku\r\nHasmuddin', NULL, 2, NULL, 'No', 'Avana', NULL, ''),
+(98, 'Reshma Binti Abdull Malik', NULL, 2, NULL, 'No', 'NAZA World Group of Companies', NULL, ''),
+(99, 'Chris Toh', NULL, 2, NULL, 'No', 'Smartfive', NULL, '');
 
 --
 -- Indexes for dumped tables

@@ -93,7 +93,7 @@ $comp_name=$_GET['comp_name'];
                             <div class="box">
 
                             <?php 
-                                        if($row = $absentVIP->fetch_assoc()){
+                                        if($row = $attendVIP->fetch_assoc()){
                                             echo '
                                             <a>
                                             <h1 class="title" style="padding-top:10px;  opacity: 0.2;">Table '.$row['tableNo'].'</h1>
@@ -105,7 +105,7 @@ $comp_name=$_GET['comp_name'];
                                             
                                             '; 
                                         }
-                                        else if($row = $attendVIP->fetch_assoc()){
+                                        else if($row = $absentVIP->fetch_assoc()){
                                             echo '
 
                                             <a href="  action/Nonaccompany.php?id='.$row['id'].'   " >
@@ -141,7 +141,7 @@ $comp_name=$_GET['comp_name'];
                             <div class="box">
 
                             <?php 
-                                        if($row = $absentTERATO->fetch_assoc()){
+                                        if($row = $attendTERATO->fetch_assoc()){
                                             echo '
                                             <a>
                                             <h1 class="title" style="padding-top:10px;  opacity: 0.2;">Table '.$row['tableNo'].'</h1>
@@ -153,7 +153,7 @@ $comp_name=$_GET['comp_name'];
                                             
                                             '; 
                                         }
-                                        else if($row = $attendTERATO->fetch_assoc()){
+                                        else if($row = $absentTERATO->fetch_assoc()){
                                             echo '
 
                                             <a href="  action/Nonaccompany.php?id='.$row['id'].'   " >
