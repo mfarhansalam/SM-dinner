@@ -63,12 +63,13 @@ $absent = mysqli_query($connect, $sql3);
                                         if($row1 = $attend->fetch_assoc()){
                                             echo '
                                             <a>
-                                            <h1 class="title" style="padding-top:10px;  opacity: 0.2;">Table '.$row1['tableNo'].'</h1>
-                                            <img src="data:image/jpg;base64,'.base64_encode($row1['picture']).'"  style="border: 5px solid green; border-radius: 50%; width: 150px; height: 150px; opacity: 0.2;"  > 
+                                            <h3 class="title">Table '.$row['tableNo'].'</h3>
+                                            <img src="data:image/jpg;base64,'.base64_encode($row['picture']).'"  style="border: 10px solid green; border-radius: 50%; width: 150px; height: 150px; "  > 
                                             
                                             </a>
-                                            <h5 class="title" style="padding-top:10px;  opacity: 0.2;">'.$row1['name'].'</h5>
-                                            <h6 class="title" style="opacity: 0.2;">'.$row1['roles'].'</h6>
+                                            <h6 style="color: green; "><b>Arrived</b></h6>
+                                            <h5 class="title" style="padding-top:10px; ">'.$row['name'].'</h5>
+                                            <h6 class="title" >'.$row['roles'].'</h6>
                                             
                                             '; 
                                         }
@@ -76,7 +77,7 @@ $absent = mysqli_query($connect, $sql3);
                                             echo '
 
                                             <a href="  action/Accompany.php?id='.$row2['id'].'   " >
-                                            <h1>Table '.$row2['tableNo'].'</h1>
+                                            <h3>Table '.$row2['tableNo'].'</h3>
                                             <img src="data:image/jpg;base64,'.base64_encode($row2['picture']).'"  style="border:0.5px solid black; border-radius: 50%; width: 150px; height: 150px;" > 
                                             </a>
                                             <h5 class="title" style="padding-top:10px">'.$row2['name'].'</h5>
