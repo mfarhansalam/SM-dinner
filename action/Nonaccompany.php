@@ -42,9 +42,10 @@ require_once 'db_connect.php';
                 
                     $sql  = "UPDATE users SET attend_status = '$attend_status' WHERE id = '$id'" ;
                     $sql2 = "SELECT * FROM users WHERE id='$id' AND company != 1";
-                    $result = mysqli_query($connect, $sql2);
+                    $result = mysqli_query($connect, $sql);
+                    $result1 = mysqli_query($connect, $sql2);
 
-                     if ($result->num_rows > 0){
+                     if ($result1->num_rows > 0){
                             echo "
                            <script>
                            Swal.fire({
