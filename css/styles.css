@@ -311,6 +311,7 @@ svg {
 table {
   caption-side: bottom;
   border-collapse: collapse;
+  font-weight:normal;
 }
 
 caption {
@@ -11817,7 +11818,9 @@ a:hover {
 #dinner td, #dinner th {
   border: 1px solid #ddd;
   padding: 8px;
+  
 }
+
 
 #dinner tr:nth-child(even){background-color: #f2f2f2;}
 
