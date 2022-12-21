@@ -77,6 +77,7 @@ $totalabsent = mysqli_query($connect, $sql3);
               <td> $no </td>
               <td> $row[name] </td>
               <td> $row[tableNo] </td>
+
               </tr>
               ";
               $no++;
@@ -93,6 +94,7 @@ $totalabsent = mysqli_query($connect, $sql3);
     <th>No</th>
     <th>Name</th>
     <th>Table</th>
+    <th>Status</th>
   </tr>
 
    
@@ -105,13 +107,15 @@ $totalabsent = mysqli_query($connect, $sql3);
               <td> $no </td>
               <td> $row[name] </td>
               <td> $row[tableNo] </td>
+              <td><a href='action/changeStatus.php?id=".$row['id']."' class='btn btn-outline-warning'>Change Status</a></td>
+
               </tr>
               ";
               $no++;
         }
       }
       else{
-        echo "<td colspan='3'>No one is coming yet</td>";
+        echo "<td colspan='4'>No one is coming yet</td>";
       }
   ?>
 </table>
@@ -124,6 +128,7 @@ $totalabsent = mysqli_query($connect, $sql3);
     <th>No</th>
     <th>Name</th>
     <th>Table</th>
+    <th>Status</th>
   </tr>
 
    
@@ -136,13 +141,15 @@ $totalabsent = mysqli_query($connect, $sql3);
               <td> $no </td>
               <td> $row[name] </td>
               <td> $row[tableNo] </td>
+              <td><a href='action/changeStatus.php?id=".$row['id']."' class='btn btn-outline-warning'>Change Status</a></td>
+
               </tr>
               ";
               $no++;
         }
       }
       else{
-        echo "<td colspan='3'>Congrats! All audiences were attended</td>";
+        echo "<td colspan='4'>Congrats! All audiences were attended</td>";
       }
   ?>
 </table>
