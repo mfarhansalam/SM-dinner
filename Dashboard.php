@@ -65,6 +65,7 @@ $totalabsent = mysqli_query($connect, $sql3);
     <th>No</th>
     <th>Name</th>
     <th>Table</th>
+    <th>Action</th>
   </tr>
 
    
@@ -76,16 +77,26 @@ $totalabsent = mysqli_query($connect, $sql3);
               <tr>
               <td> $no </td>
               <td> $row[name] </td>
-              <td> $row[tableNo] </td>
+             
+              <td>
+              $row[tableNo]
+              </td>
+              <td>
+              <a href='editTable.php?id=".$row['id']."'>Edit</a>
+              </td>
 
               </tr>
               ";
               $no++;
+             
         }
       }
   ?>
 </table>
 </div>
+
+
+
 
 <!-- Attended users goes here -->
 <div id="attend" class="tabcontent">
