@@ -16,6 +16,9 @@ $sql7= "SELECT * FROM users WHERE attend_status = 'No' AND company = 3 ";
 $sql8= "SELECT * FROM users WHERE attend_status = 'Yes' AND company = 4 ";
 $sql9= "SELECT * FROM users WHERE attend_status = 'No' AND company = 4 ";
 
+$sql11= "SELECT * FROM users WHERE attend_status = 'Yes' AND company = 5 ";
+$sql12= "SELECT * FROM users WHERE attend_status = 'No' AND company = 5 ";
+
 
 
 $result4 = mysqli_query($connect, $sql10);
@@ -28,6 +31,8 @@ $attendTERATO = mysqli_query($connect, $sql6);
 $absentTERATO = mysqli_query($connect, $sql7);
 $attendCELEB = mysqli_query($connect, $sql8);
 $absentCELEB = mysqli_query($connect, $sql9);
+$attendAIN = mysqli_query($connect, $sql11);
+$absentAIN = mysqli_query($connect, $sql12);
 
 $comp_name=$_GET['comp_name'];
 
@@ -234,6 +239,55 @@ $comp_name=$_GET['comp_name'];
                             
                       }
                     }
+
+                    if($comp_name == "Al-Ain"){
+                        ?>
+                          <h2 style="text-align: center;">Who are you? </h2>  
+                          <div class="row g-4" style="padding-top: 2cm">
+                        <?php
+                            while($row = $result4->fetch_assoc()) {
+                                ?>
+                                <div class="col-md-4 col-lg-4 ">
+                                    <div class="box">
+        
+                                    <?php 
+                                                if($row = $attendAIN->fetch_assoc()){
+                                                    echo '
+                                                <a>
+                                                <h3 class="title" style="">Table '.$row['tableNo'].'</h3>
+                                                <img src="data:image/jpg;base64,'.base64_encode($row['picture']).'"  style="border: 10px solid green; border-radius: 50%; width: 150px; height: 150px;"  > 
+                                                
+                                                </a>
+                                                <h6 style="color: green;"><b>Arrived</b></h6>
+                                                <h5 class="title" style="padding-top:10px; ">'.$row['name'].'</h5>
+                                                <h6 class="title" style="">'.$row['roles'].'</h6>
+                                                
+                                                '; 
+                                                }
+                                                else if($row = $absentAIN->fetch_assoc()){
+                                                    echo '
+        
+                                                    <a href="  action/Nonaccompany.php?id='.$row['id'].'   " >
+                                                    <h3>Table '.$row['tableNo'].'</h3>
+                                                    <img src="data:image/jpg;base64,'.base64_encode($row['picture']).'"  style="border:0.5px solid black; border-radius: 50%; width: 150px; height: 150px;" > 
+                                                    </a>
+                                                    <h5 class="title" style="padding-top:10px">'.$row['name'].'</h5>
+                                                    <h6 class="title">'.$row['roles'].'</h6>
+                                                    '; 
+                                                }
+                                                
+                                                
+                                            ?>
+        
+                                    </div>
+                                            
+        
+                                </div>
+                               
+                                <?php
+                                
+                          }
+                        }
 
                 ?>
 

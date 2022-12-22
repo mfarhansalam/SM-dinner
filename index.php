@@ -34,7 +34,7 @@
                             <img src="assets/img/Logo-dinner.png" alt="silentmode dinner" >
     
                             <a class="btn btn-primary" href="Company.php" style="font-size:20px">I am here!!</a><br><br>
-                            <a href ="Dashboard.php"> See Dashboard</a>
+                            <a style="font-size: 11px;" href ="Dashboard.php">Powered by Silentmode Sdn Bhd</a>
                         </div>
                     </div>
                 </div>
