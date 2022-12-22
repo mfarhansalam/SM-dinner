@@ -37,10 +37,8 @@ $totalabsent = mysqli_query($connect, $sql3);
     <body >
 
         <div class="sidenav" style="padding-left: 20px;padding-right: 20px;padding-top: 60px;">
-            <img src="assets/img/Logo-dinner.png" alt="silentmode dinner" >
-            <div style="padding-top: 500px; padding-left: 30px;">
-            <button type="button" onclick="history.back()" class="btn btn-outline-warning btn-sm">BACK</button>
-            </div>
+            <a href="index.php"> <img src="assets/img/Logo-dinner.png" alt="silentmode dinner" > </a>
+            
             
         </div>
         
